@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Aquafix</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        aqua: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        nature: {
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-dark {
+            background: rgba(8, 47, 73, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #38bdf8;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-900 text-white font-sans antialiased overflow-x-hidden selection:bg-aqua-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <span
+                            class="text-3xl font-bold bg-gradient-to-r from-aqua-400 to-nature-400 bg-clip-text text-transparent">Aquafix</span>
+                        <div class="h-2 w-2 rounded-full bg-nature-500 animate-pulse"></div>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="shop.html"
+                            class="nav-link text-aqua-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Shop
+                            Plants</a>
+                        <a href="about.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="shop.html"
+                        class="bg-aqua-600 hover:bg-aqua-500 text-white px-6 py-2 rounded-full font-medium transition-all shadow-lg shadow-aqua-500/20 hover:shadow-aqua-500/40">Shop
+                        Now</a>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass-dark" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Shop Plants</a>
+                <a href="about.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 pt-32 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold text-white mb-4">Our Plant Collection</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">Explore our wide range of premium aquatic plants, from easy-care
+                beginners to rare collector's items.</p>
+        </div>
+    </div>
+
+    <!-- Shop Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Filters Sidebar -->
+            <div class="w-full lg:w-64 flex-shrink-0">
+                <div class="bg-slate-800/50 p-6 rounded-2xl sticky top-24 border border-slate-700/50">
+                    <h3 class="text-xl font-bold text-white mb-6">Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="block text-aqua-400 font-medium">All Plants</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Foreground
+                                (Carpeting)</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Midground</a>
+                        </li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Background
+                                (Stems)</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Epiphytes
+                                (Anubias/Ferns)</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Floating
+                                Plants</a></li>
+                        <li><a href="#" class="block text-gray-400 hover:text-white transition-colors">Mosses</a></li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-white mt-8 mb-6">Light Requirement</h3>
+                    <ul class="space-y-3">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-aqua-600 bg-slate-700 border-slate-600 rounded focus:ring-aqua-500 focus:ring-offset-slate-900">
+                            <span class="text-gray-400">Low Light</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-aqua-600 bg-slate-700 border-slate-600 rounded focus:ring-aqua-500 focus:ring-offset-slate-900">
+                            <span class="text-gray-400">Medium Light</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-aqua-600 bg-slate-700 border-slate-600 rounded focus:ring-aqua-500 focus:ring-offset-slate-900">
+                            <span class="text-gray-400">High Light</span>
+                        </label>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <!-- Sort Bar -->
+                <div class="flex justify-between items-center mb-8 bg-slate-800/30 p-4 rounded-xl">
+                    <span class="text-gray-400">Showing 12 results</span>
+                    <select
+                        class="bg-slate-700 text-white rounded-lg px-4 py-2 border-none focus:ring-2 focus:ring-aqua-500">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest Arrivals</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Anubias_Nana_aquarium_plant_green_leaves" alt="Anubias"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Anubias Nana</h3>
+                                    <p class="text-sm text-gray-500">Epiphyte</p>
+                                </div>
+                                <span class="bg-nature-900/50 text-nature-400 text-xs px-2 py-1 rounded">Easy</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$12.00</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Java_Fern_Microsorum_pteropus_aquarium" alt="Java Fern"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Java Fern</h3>
+                                    <p class="text-sm text-gray-500">Epiphyte</p>
+                                </div>
+                                <span class="bg-nature-900/50 text-nature-400 text-xs px-2 py-1 rounded">Easy</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$8.50</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Rotala_Rotundifolia_red_aquatic_plant" alt="Rotala"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Rotala Rotundifolia</h3>
+                                    <p class="text-sm text-gray-500">Background Stem</p>
+                                </div>
+                                <span class="bg-yellow-900/50 text-yellow-400 text-xs px-2 py-1 rounded">Medium</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$6.00</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Monte_Carlo_Micranthemum_tweetiei_aquarium"
+                                alt="Monte Carlo"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Monte Carlo</h3>
+                                    <p class="text-sm text-gray-500">Carpeting</p>
+                                </div>
+                                <span class="bg-yellow-900/50 text-yellow-400 text-xs px-2 py-1 rounded">Medium</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$10.00</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Bucephalandra_Purple_aquarium_plant_rare"
+                                alt="Bucephalandra"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Bucephalandra Purple</h3>
+                                    <p class="text-sm text-gray-500">Epiphyte / Rare</p>
+                                </div>
+                                <span class="bg-nature-900/50 text-nature-400 text-xs px-2 py-1 rounded">Easy</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$25.00</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card -->
+                    <div
+                        class="group relative bg-slate-800/50 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-aqua-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-aqua-500/10">
+                        <div class="relative aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200">
+                            <img src="https://pollinations.ai/p/Amazon_Sword_Echinodorus_aquarium_plant"
+                                alt="Amazon Sword"
+                                class="h-64 w-full object-cover object-center group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3
+                                        class="text-lg font-semibold text-white group-hover:text-aqua-400 transition-colors">
+                                        Amazon Sword</h3>
+                                    <p class="text-sm text-gray-500">Background</p>
+                                </div>
+                                <span class="bg-nature-900/50 text-nature-400 text-xs px-2 py-1 rounded">Easy</span>
+                            </div>
+                            <div class="mt-4 flex items-center justify-between">
+                                <span class="text-lg font-bold text-white">$7.00</span>
+                                <button
+                                    class="bg-aqua-600 hover:bg-aqua-500 text-white p-2 rounded-full transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-12 flex justify-center space-x-2">
+                    <button
+                        class="px-4 py-2 border border-slate-700 rounded-lg text-gray-400 hover:border-aqua-500 hover:text-white transition-colors">Previous</button>
+                    <button class="px-4 py-2 bg-aqua-600 text-white rounded-lg">1</button>
+                    <button
+                        class="px-4 py-2 border border-slate-700 rounded-lg text-gray-400 hover:border-aqua-500 hover:text-white transition-colors">2</button>
+                    <button
+                        class="px-4 py-2 border border-slate-700 rounded-lg text-gray-400 hover:border-aqua-500 hover:text-white transition-colors">3</button>
+                    <button
+                        class="px-4 py-2 border border-slate-700 rounded-lg text-gray-400 hover:border-aqua-500 hover:text-white transition-colors">Next</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-slate-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 Aquafix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

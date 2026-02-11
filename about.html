@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Aquafix</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        aqua: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        nature: {
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-dark {
+            background: rgba(8, 47, 73, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-900 text-white font-sans antialiased overflow-x-hidden selection:bg-aqua-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-dark transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <span
+                            class="text-3xl font-bold bg-gradient-to-r from-aqua-400 to-nature-400 bg-clip-text text-transparent">Aquafix</span>
+                        <div class="h-2 w-2 rounded-full bg-nature-500 animate-pulse"></div>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="shop.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Shop
+                            Plants</a>
+                        <a href="about.html"
+                            class="nav-link text-aqua-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass-dark" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Shop
+                    Plants</a>
+                <a href="about.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="relative py-24 bg-slate-900">
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://pollinations.ai/p/aquarium_planted_tank_background_dark_lush" alt="Background"
+                class="w-full h-full object-cover opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-900"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
+            <h1 class="text-5xl font-bold text-white mb-6">Our Story</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Cultivating passion for the underwater world, one plant
+                at a time.</p>
+        </div>
+    </div>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://pollinations.ai/p/aquascaping_tools_plants_setup_modern_aquarium"
+                        alt="Aquascaping" class="rounded-2xl shadow-2xl shadow-aqua-500/20">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6">Born from a Love for Nature</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Aquafix started as a small hobby project in Colombo and has grown into a premier destination for
+                        aquatic plant enthusiasts. We believe that an aquarium is more than just a glass box; it's a
+                        living, breathing ecosystem that brings tranquility and beauty into your space.
+                    </p>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Our mission is to provide the highest quality, pest-free aquatic plants to hobbyists across Sri
+                        Lanka. Whether you are building a high-tech Iwagumi layout or a simple low-tech community tank,
+                        we have the plants and expertise to support your journey.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-aqua-400">5+</span>
+                            <span class="text-sm text-gray-500">Years Experience</span>
+                        </div>
+                        <div class="w-px h-12 bg-slate-700"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-nature-400">1000+</span>
+                            <span class="text-sm text-gray-500">Happy Customers</span>
+                        </div>
+                        <div class="w-px h-12 bg-slate-700"></div>
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-purple-400">50+</span>
+                            <span class="text-sm text-gray-500">Plant Varieties</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Grid -->
+    <section class="py-16 bg-slate-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Why Choose Aquafix?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-aqua-400 mb-4">Sustainably Grown</h3>
+                    <p class="text-gray-400">All our plants are grown in our local nursery or sourced from sustainable
+                        farms, minimizing environmental impact.</p>
+                </div>
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-nature-400 mb-4">Guaranteed Fresh</h3>
+                    <p class="text-gray-400">We offer a 100% arrival guarantee. If your plants don't arrive in perfect
+                        condition, we'll replace them.</p>
+                </div>
+                <div class="p-8 bg-slate-900 rounded-2xl border border-slate-800">
+                    <h3 class="text-xl font-bold text-purple-400 mb-4">Community Focused</h3>
+                    <p class="text-gray-400">We are committed to building the aquascaping community in Sri Lanka through
+                        workshops and knowledge sharing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-slate-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2026 Aquafix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
